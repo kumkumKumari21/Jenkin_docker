@@ -1,5 +1,10 @@
-FROM openjdk:21
+FROM eclipse-temurin:17-jdk
+
 WORKDIR /app
-COPY . .
-RUN javac *.java
-CMD ["java","Grade"]
+
+COPY . /app
+
+RUN javac Grade.java
+
+CMD ["java", "Grade"]
+
