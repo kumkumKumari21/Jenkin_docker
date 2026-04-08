@@ -1,4 +1,5 @@
-FROM python:3.10
+FROM openjdk:17
 WORKDIR /app
 COPY . .
-CMD ["python","app.py"]
+RUN javac *.java
+CMD ["java","Grade"]
